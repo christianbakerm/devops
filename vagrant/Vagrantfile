@@ -1,5 +1,17 @@
+######################################
+#  	    Configure VM             #
+######################################
+$script = <<-SCRIPT
+git clone https://github.com/christianbakerm/devops
+sudo apt install zip -y
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+#additional configuration commands go above this line
+SCRIPT
+
 Vagrant.configure("2") do |config|
  config.ssh.forward_agent = true
  config.vm.box = "hashicorp/bionic64"
+ config.vm.provision "shell", inline: $script
 end
-

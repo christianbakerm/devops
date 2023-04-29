@@ -1,0 +1,8 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Master Template for the ShivBake infrastructure
+Resources:
+  # Step: 1 Create a VPC (https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html)
+  # Requirements:
+  #   CIDR block: 10.0.0.0/16
+  #   Tags:  Key = Name, Value = production
+####### Don't move on until this works ########
