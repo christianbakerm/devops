@@ -6,3 +6,10 @@ Resources:
   #   CIDR block: 10.0.0.0/16
   #   Tags:  Key = Name, Value = production
 ####### Don't move on until this works ########
+  # Step: 2 Create 2 Public Subnets in the above VPC (https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html)
+  # Requirements:
+  #   CIDR block: 
+  #     - 10.0.10.0/24
+  #     - 10.0.11.0/24
+  #   MapPublicIpOnLaunch: true
+  #   Tags:  Key = Name, Value = public-subnet-1 & public-subnet-2
